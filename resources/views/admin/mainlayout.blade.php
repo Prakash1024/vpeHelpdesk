@@ -13,8 +13,14 @@
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="48x48" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('vpe.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
 
+
+    <footer>
+        <p>&copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved</p>
+    </footer>
+    
 </body>
 </html>
