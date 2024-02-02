@@ -13,7 +13,8 @@
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="48x48" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('vpe.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!--Style Sheets-->
+    <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
 </head>
 <body>
 
