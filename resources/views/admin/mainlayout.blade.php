@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} @isset($title) | {{$title}} @endisset</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
@@ -13,8 +13,15 @@
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="{{ asset('vpe.ico') }}" sizes="48x48" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('vpe.ico') }}" type="image/x-icon">
+    <!--Style Sheets-->
+    <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
 </head>
 <body>
 
+
+    <footer>
+        <p>&copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved</p>
+    </footer>
+    
 </body>
 </html>
