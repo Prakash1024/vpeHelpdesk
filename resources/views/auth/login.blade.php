@@ -1,5 +1,37 @@
 @extends('layouts.app')
 
+@if (session('loginStatus') === 'locked')
+    <div class="alert alert-danger" role="alert">
+        Account is locked. Please try again after <span id="countdown"></span> mins.
+    </div>
+
+    <script>
+        // Function to convert seconds to MM:SS format
+        function secondsToMinutes(seconds) {
+            var minutes = Math.floor(seconds / 60);
+            var remainingSeconds = seconds % 60;
+            return minutes + ':' + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
+        }
+
+        // Countdown logic
+        var seconds = {{ session('seconds') }};
+        function updateCountdown() {
+            if (seconds > 0) {
+                document.getElementById('countdown').textContent = secondsToMinutes(seconds);
+                seconds--;
+
+                if (seconds === 0) {
+                    // Reload the page after the countdown reaches 1 second
+                    window.location.reload();
+                } else {
+                    setTimeout(updateCountdown, 1000);
+                }
+            }
+        }
+        updateCountdown();
+    </script>
+@endif
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

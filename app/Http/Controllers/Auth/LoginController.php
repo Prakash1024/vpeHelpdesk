@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -17,8 +21,29 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
+    use ThrottlesLogins;
     use AuthenticatesUsers;
+
+    /**
+     * Lock user for 5 minutes after 3 wrong attempts
+     * 
+     */
+    protected $maxAttempts = 3;
+    protected $decayMinutes = 5;
+ 
+     // ...
+ 
+    protected function sendLockoutResponse(Request $request)
+    {
+         $seconds = $this->limiter()->availableIn(
+             $this->throttleKey($request)
+         );
+ 
+         return redirect()->route('login')->with([
+             'loginStatus' => 'locked',
+             'seconds' => $seconds,
+         ]);
+    }
 
     /**
      * Where to redirect users after login.
