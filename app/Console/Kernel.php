@@ -13,6 +13,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+
+        //Clean Activity logs one year old data
+        $logFilePath = 'activity_delete.log';
+        $schedule->command('activitylog:clean --force >> ' .$logFilePath. ' 2>&1')->monthly();
     }
 
     /**
