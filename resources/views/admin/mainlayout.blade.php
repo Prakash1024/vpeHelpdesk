@@ -20,7 +20,7 @@
 
 
     <footer class="footer">
-        <p>&copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved</p>
+        &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
     </footer>
     
 </body>
