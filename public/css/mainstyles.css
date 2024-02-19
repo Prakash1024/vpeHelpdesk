@@ -1,1 +1,8 @@
-/* CSS */
+.footer {
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+    bottom: 0;
+    /* z-index: 100; */
+    /* text-align: center; */
+}
