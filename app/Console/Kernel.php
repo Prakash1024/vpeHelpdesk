@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
 
         //Clean Activity logs one year old data
-        $schedule->command('activitylog:clean --force')->monthly();
+        $logFilePath = 'activity_delete.log';
+        $schedule->command('activitylog:clean --force >> ' .$logFilePath. ' 2>&1')->monthly();
     }
 
     /**
