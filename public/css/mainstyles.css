@@ -14,24 +14,28 @@ body {
   
 .card {
     flex: 1;
-    border: 1px solid #8c96c0;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(66, 88, 185, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+
+    /* Hover effect */
 }
-  
-.card-header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #8c96c0;
-    padding: 10px;
+
+.mycard {
+    transition: transform 0.3s ease;
 }
-  
-.card-body {
-    padding: 10px;
+
+.mycard:hover {
+    
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase box shadow on hover */
 }
   
 .card-text {
-    color: #333;
+    color: #273480;
 }
 
 
