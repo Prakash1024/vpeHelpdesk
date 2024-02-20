@@ -7,6 +7,32 @@ body {
     margin: 0;
 }
 
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.card {
+    flex: 1;
+    border: 1px solid #8c96c0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(66, 88, 185, 0.1);
+    margin: 0 10px;
+}
+  
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #8c96c0;
+    padding: 10px;
+}
+  
+.card-body {
+    padding: 10px;
+}
+  
+.card-text {
+    color: #333;
+}
 
 
 
