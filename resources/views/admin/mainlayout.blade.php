@@ -38,24 +38,28 @@
                       <span class="nav_name">Dashboard</span>
                     </a>
                     <a href="#" class="nav_link">
+                      <i class='bx bx-cart-add nav_icon' ></i>
+                      <span class="nav_name">Orders</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-spreadsheet nav_icon'></i>
+                      <span class="nav_name">Claimed Orders</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bxs-capsule nav_icon' ></i>
+                      <span class="nav_name">Medicines</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-store nav_icon'></i>
+                      <span class="nav_name">Enrolled Shops</span>
+                    </a>
+                    <a href="#" class="nav_link">
                       <i class='bx bx-user nav_icon'></i>
                       <span class="nav_name">Users</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bx-message-square-detail nav_icon'></i>
-                      <span class="nav_name">Messages</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                      <i class='bx bx-bookmark nav_icon'></i>
-                      <span class="nav_name">Bookmark</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                      <i class='bx bx-folder nav_icon'></i>
-                      <span class="nav_name">Files</span>
-                    </a>
-                    <a href="#" class="nav_link">
-                      <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                      <span class="nav_name">Stats</span>
+                      <i class='bx bx-info-circle nav_icon'></i>
+                      <span class="nav_name">Activity Logs</span>
                     </a>
                   </div>
                 </div>
