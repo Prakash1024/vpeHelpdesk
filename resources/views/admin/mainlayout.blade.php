@@ -80,5 +80,3 @@
     </section>
 </body>
 </html>
-
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
