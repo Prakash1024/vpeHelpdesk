@@ -17,11 +17,15 @@
     <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
 </head>
 <body>
-
-
-    <footer class="footer">
-        &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
-    </footer>
-    
+    <nav class="aside">
+    </nav>
+    <section>
+        <div class="main-header">
+        </div>
+        @yield('content')
+        <footer class="footer">
+            &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
+        </footer>
+    </section>
 </body>
 </html>
