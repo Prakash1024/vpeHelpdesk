@@ -15,13 +15,71 @@
     <link rel="shortcut icon" href="{{ asset('vpe.ico') }}" type="image/x-icon">
     <!--Style Sheets-->
     <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/sidebar.js') }}"></script>
+
 </head>
-<body>
-
-
-    <footer>
-        <p>&copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved</p>
-    </footer>
-    
+<body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                  <a href="#" class="nav_logo">
+                    <img src="{{ asset('vpe.ico') }}" alt="VPE" width="30" height="24">
+                    <span class="nav_logo-name">Customer Care</span>
+                  </a>
+                  <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                      <i class='bx bx-grid-alt nav_icon'></i>
+                      <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-cart-add nav_icon' ></i>
+                      <span class="nav_name">Orders</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-spreadsheet nav_icon'></i>
+                      <span class="nav_name">Claimed Orders</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bxs-capsule nav_icon' ></i>
+                      <span class="nav_name">Medicines</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-store nav_icon'></i>
+                      <span class="nav_name">Enrolled Shops</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-user nav_icon'></i>
+                      <span class="nav_name">Users</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bx-info-circle nav_icon'></i>
+                      <span class="nav_name">Activity Logs</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="#" class="nav_link">
+                  <i class='bx bx-log-out nav_icon'></i>
+                  <span class="nav_name">SignOut</span>
+                </a>
+              </nav>
+        </div>
+        <!--Container Main start-->
+        <div class="height-100 bg-light">
+            <h4>Main Components</h4>
+        </div>
+        <!--Container Main end-->
+    <section>
+        <div class="main-header">
+        </div>
+        @yield('content')
+        <footer class="footer">
+            &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
+        </footer>
+    </section>
 </body>
 </html>

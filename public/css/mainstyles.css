@@ -1,1 +1,54 @@
-/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #ededef;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.card {
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+
+    /* Hover effect */
+}
+
+.mycard {
+    transition: transform 0.3s ease;
+}
+
+.mycard:hover {
+    
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase box shadow on hover */
+}
+  
+.card-text {
+    color: #273480;
+}
+
+
+
+
+
+
+.footer {
+    padding: 12px 4px;
+    color: #4a5f76;
+    /* bottom: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    text-align: center; */
+}
