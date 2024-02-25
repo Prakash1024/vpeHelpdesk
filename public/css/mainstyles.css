@@ -4,7 +4,17 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     background-color: #ededef;
+    height: 100%;
     margin: 0;
+    margin-top: 0!important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    margin-top: 60px;
 }
 
 .card-container {
@@ -20,10 +30,9 @@ body {
     margin: 0 10px;
     background-color: #ffffff;
     transition: box-shadow 0.3s ease;
-
-    /* Hover effect */
 }
 
+  /* Hover effect */
 .mycard {
     transition: transform 0.3s ease;
 }
@@ -37,11 +46,6 @@ body {
 .card-text {
     color: #273480;
 }
-
-
-
-
-
 
 .footer {
     padding: 12px 4px;
