@@ -17,6 +17,7 @@
     <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <script src="{{ asset('js/sidebar.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
 </head>
 <body id="body-pd">
@@ -68,18 +69,11 @@
                 </a>
               </nav>
         </div>
-        <!--Container Main start-->
-        <div class="height-100 bg-light">
-            <h4>Main Components</h4>
+        <div class="content">
+          @yield('content')
         </div>
-        <!--Container Main end-->
-    <section>
-        <div class="main-header">
-        </div>
-        @yield('content')
-        <footer class="footer">
-            &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
+        <footer class="footer" id="footer">
+          &copy; {{ date('Y') }} Vpe Healthcare, All Rights Reserved
         </footer>
-    </section>
 </body>
 </html>
