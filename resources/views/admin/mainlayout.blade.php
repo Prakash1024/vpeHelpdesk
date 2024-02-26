@@ -18,13 +18,30 @@
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
     <script src="{{ asset('js/sidebar.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
-
 </head>
 <body id="body-pd">
+  {{-- <--===================== Header ===================--> --}}
         <header class="header" id="header">
-            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+          <div class="header_toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+          </div>
+          <div class="header_profile">
+            <div class="header_icons">
+              <i class="fa-solid fa-cart-plus"></i>
+              <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="profile_img" onclick="toggleDropdown()">
+              <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+              <div class="dropdown" id="profileDropdown">
+                <a href="#"><i class='bx bx-user' ></i>Profile</a>
+                <a href="#"><i class='bx bx-cog' ></i>Settings</a>
+                <a href="#"><i class='bx bx-log-out' ></i>Logout</a>
+              </div>
+            </div>
+          </div>
         </header>
+    {{-- <--===================== Sidenav ===================--> --}}
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
@@ -69,6 +86,7 @@
                 </a>
               </nav>
         </div>
+    {{-- <--===================== Content & Footer ===================--> --}}
         <div class="content">
           @yield('content')
         </div>

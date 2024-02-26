@@ -25,3 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+function toggleDropdown() {
+    var dropdown = document.getElementById("profileDropdown");
+    dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.closest('.profile_img')) {
+      var dropdown = document.getElementById("profileDropdown");
+      dropdown.style.display = "none";
+    }
+  };
