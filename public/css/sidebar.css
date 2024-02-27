@@ -237,3 +237,11 @@ a {
       display: none;
   }
 }
+
+#usericon{
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  color: #9292a0;
+  cursor: pointer;
+}
