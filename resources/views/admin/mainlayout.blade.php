@@ -23,8 +23,19 @@
 <body id="body-pd">
   {{-- <--===================== Header ===================--> --}}
         <header class="header" id="header">
-          <div class="header_toggle">
+          <div class="header_toggle" style="display:flex;">
+            <div>
             <i class='bx bx-menu' id="header-toggle"></i>
+          </div>
+            <div style="padding-left: 20px;padding-top:6px;">
+              <nav class="breadcrumb">
+                <a href="/home">Home</a>
+                @if(isset($title))
+                <span>></span>
+                <span class="current-page">{{title}}</span>
+                @endif
+              </nav>
+            </div>
           </div>
           <div class="header_profile">
             <div class="header_icons">
@@ -33,7 +44,13 @@
               <i class="fas fa-bell"></i>
             </div>
             <div class="profile_img" onclick="toggleDropdown()">
-              <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+              <div class="header_img"> 
+                @if(empty($imageUrl))
+                  <i class='bx bxs-user-circle' id="usericon"></i>
+                @else
+                  <img src="{{ $imageUrl }}" alt="User">
+                @endif
+              </div>
               <div class="dropdown" id="profileDropdown">
                 <a href="#"><i class='bx bx-user' ></i>Profile</a>
                 <a href="#"><i class='bx bx-cog' ></i>Settings</a>
