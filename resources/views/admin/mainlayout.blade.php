@@ -42,9 +42,9 @@
             </div>
           </div>
         </header>
-        @if(session()->has('status'))
+        @if(session()->has('success'))
           <div id="infoAlert" class="alert alert-success" role="alert">
-            <strong>{{ session('status') }}</strong>
+            <strong>{{ session('success') }}</strong>
           </div>
         @endif
         @if(session()->has('warning'))
