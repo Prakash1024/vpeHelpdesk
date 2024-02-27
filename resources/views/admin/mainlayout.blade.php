@@ -23,8 +23,19 @@
 <body id="body-pd">
   {{-- <--===================== Header ===================--> --}}
         <header class="header" id="header">
-          <div class="header_toggle">
+          <div class="header_toggle" style="display:flex;">
+            <div>
             <i class='bx bx-menu' id="header-toggle"></i>
+          </div>
+            <div style="padding-left: 20px;padding-top:6px;">
+              <nav class="breadcrumb">
+                <a href="/home">Home</a>
+                @if(isset($title))
+                <span>></span>
+                <span class="current-page">{{title}}</span>
+                @endif
+              </nav>
+            </div>
           </div>
           <div class="header_profile">
             <div class="header_icons">
