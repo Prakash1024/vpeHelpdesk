@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @if (session('loginStatus') === 'locked')
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger text-center" role="alert">
         Account is locked. Please try again after <span id="countdown"></span> mins.
     </div>
 
