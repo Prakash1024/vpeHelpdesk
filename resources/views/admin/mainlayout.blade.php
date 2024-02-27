@@ -16,6 +16,7 @@
     <!--Style Sheets-->
     <link href="{{ asset('css/mainstyles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('js/sidebar.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 </head>
@@ -41,6 +42,21 @@
             </div>
           </div>
         </header>
+        @if(session()->has('status'))
+          <div id="infoAlert" class="alert alert-success" role="alert">
+            <strong>{{ session('status') }}</strong>
+          </div>
+        @endif
+        @if(session()->has('warning'))
+          <div id="infoAlert" class="alert alert-warning" role="alert">
+            <strong>{{ session('warning') }}</strong>
+          </div>
+        @endif
+        @if(session()->has('error'))
+          <div id="infoAlert" class="alert alert-danger" role="alert">
+            <strong>{{ session('error') }}</strong>
+          </div>
+        @endif
     {{-- <--===================== Sidenav ===================--> --}}
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
