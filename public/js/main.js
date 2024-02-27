@@ -37,3 +37,7 @@ function toggleDropdown() {
       dropdown.style.display = "none";
     }
   };
+
+  setTimeout(function() {
+    $('#infoAlert').alert('close');
+    }, 5000);
