@@ -54,11 +54,17 @@
               <div class="dropdown" id="profileDropdown">
                 <a href="#"><i class='bx bx-user' ></i>Profile</a>
                 <a href="#"><i class='bx bx-cog' ></i>Settings</a>
-                <a href="#"><i class='bx bx-log-out' ></i>Logout</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                <i class='bx bx-log-out' ></i>Logout</a>
               </div>
+              
             </div>
           </div>
         </header>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
         @if(session()->has('success'))
           <div id="infoAlert" class="alert alert-success" role="alert">
             <strong>{{ session('success') }}</strong>
@@ -113,7 +119,8 @@
                     </a>
                   </div>
                 </div>
-                <a href="#" class="nav_link">
+                <a class="nav_link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                   <i class='bx bx-log-out nav_icon'></i>
                   <span class="nav_name">SignOut</span>
                 </a>
