@@ -87,7 +87,7 @@
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
-                  <a href="#" class="nav_logo">
+                  <a href="/home" class="nav_logo">
                     <img src="{{ asset('vpe.ico') }}" alt="VPE" width="30" height="24">
                     <span class="nav_logo-name">Customer Care</span>
                   </a>
