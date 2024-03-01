@@ -41,3 +41,18 @@ function toggleDropdown() {
   setTimeout(function() {
     $('#infoAlert').alert('close');
     }, 5000);
+
+// show loading on page load
+$(window).on('load', function () {
+    $('#loading').fadeOut();
+         });
+ 
+   // Show loading image
+   function showLoading() {
+       $('#loading').fadeIn();
+   }
+
+   // Hide loading image
+   function hideLoading() {
+       $('#loading').fadeOut();
+   }

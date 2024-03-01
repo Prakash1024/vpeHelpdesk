@@ -21,6 +21,9 @@
     <script src="{{ asset('js/main.js') }}"></script>
 </head>
 <body id="body-pd">
+      <div id="loading" class="loading-overlay">
+        <img src="{{ asset('loading.gif') }}" alt="Loading..." />
+      </div>
   {{-- <--===================== Header ===================--> --}}
         <header class="header" id="header">
           <div class="header_toggle" style="display:flex;">
