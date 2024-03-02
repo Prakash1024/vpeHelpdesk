@@ -21,6 +21,9 @@
     <script src="{{ asset('js/main.js') }}"></script>
 </head>
 <body id="body-pd">
+      <div id="loading" class="loading-overlay">
+        <img src="{{ asset('loading.gif') }}" alt="Loading..." />
+      </div>
   {{-- <--===================== Header ===================--> --}}
         <header class="header" id="header">
           <div class="header_toggle" style="display:flex;">
@@ -54,11 +57,17 @@
               <div class="dropdown" id="profileDropdown">
                 <a href="#"><i class='bx bx-user' ></i>Profile</a>
                 <a href="#"><i class='bx bx-cog' ></i>Settings</a>
-                <a href="#"><i class='bx bx-log-out' ></i>Logout</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                <i class='bx bx-log-out' ></i>Logout</a>
               </div>
+              
             </div>
           </div>
         </header>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
         @if(session()->has('success'))
           <div id="infoAlert" class="alert alert-success" role="alert">
             <strong>{{ session('success') }}</strong>
@@ -78,12 +87,12 @@
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
-                  <a href="#" class="nav_logo">
+                  <a href="/home" class="nav_logo">
                     <img src="{{ asset('vpe.ico') }}" alt="VPE" width="30" height="24">
                     <span class="nav_logo-name">Customer Care</span>
                   </a>
                   <div class="nav_list">
-                    <a href="#" class="nav_link active">
+                    <a href="/home" class="nav_link active">
                       <i class='bx bx-grid-alt nav_icon'></i>
                       <span class="nav_name">Dashboard</span>
                     </a>
@@ -113,7 +122,8 @@
                     </a>
                   </div>
                 </div>
-                <a href="#" class="nav_link">
+                <a class="nav_link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                   <i class='bx bx-log-out nav_icon'></i>
                   <span class="nav_name">SignOut</span>
                 </a>
