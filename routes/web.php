@@ -19,7 +19,8 @@ use App\Http\Controllers\{
 };
 
 Route::get('/', function () {
-    return view('welcome')->with('title', 'Home');
+    // return view('welcome')->with('title', 'Home');
+    return redirect('/login');
 });
 
 Auth::routes();
