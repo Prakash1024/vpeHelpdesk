@@ -36,7 +36,7 @@
                 <a href="/home">Home</a>
                 @if(isset($title))
                 <span>></span>
-                <span class="current-page">{{title}}</span>
+                <span class="current-page">{{$title}}</span>
                 @endif
               </nav>
             </div>
