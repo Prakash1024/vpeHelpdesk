@@ -36,7 +36,7 @@
                 <a href="/home">Home</a>
                 @if(isset($title))
                 <span>></span>
-                <span class="current-page">{{title}}</span>
+                <span class="current-page">{{$title}}</span>
                 @endif
               </nav>
             </div>
@@ -113,6 +113,7 @@
                       <i class='bx bx-store nav_icon'></i>
                       <span class="nav_name">Enrolled Shops</span>
                     </a>
+                    @if (Auth::user()->superadmin === 1) 
                     <a href="#" class="nav_link">
                       <i class='bx bx-user nav_icon'></i>
                       <span class="nav_name">Users</span>
@@ -121,6 +122,13 @@
                       <i class='bx bx-info-circle nav_icon'></i>
                       <span class="nav_name">Activity Logs</span>
                     </a>
+                  @endif
+                  @if (Auth::user()->superadmin === 0)
+                  <a href="#" class="nav_link">
+                    <i class='bx bx-info-circle nav_icon'></i>
+                    <span class="nav_name">FAQ's</span>
+                  </a>
+                  @endif
                   </div>
                 </div>
                 <a class="nav_link" href="{{ route('logout') }}" onclick="event.preventDefault();
