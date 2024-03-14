@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\{
-    HomeController
+    HomeController,
+    UserController
 };
 
 Route::get('/', function () {
@@ -26,3 +27,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::resource('users', UserController::class);
