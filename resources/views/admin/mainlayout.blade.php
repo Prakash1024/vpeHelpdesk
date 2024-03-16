@@ -113,6 +113,10 @@
                       <i class='bx bx-store nav_icon'></i>
                       <span class="nav_name">Enrolled Shops</span>
                     </a>
+                    <a href="#" class="nav_link">
+                      <i class='bx bxs-star-half nav_icon'></i>
+                      <span class="nav_name">Reviews</span>
+                    </a>
                     @if (Auth::user()->superadmin === 1) 
                     <a href="#" class="nav_link">
                       <i class='bx bx-user nav_icon'></i>
