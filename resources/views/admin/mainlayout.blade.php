@@ -94,42 +94,42 @@
                   </a>
                   <div class="nav_list">
                     <a href="/home" class="nav_link active">
-                      <i class='bx bx-grid-alt nav_icon'></i>
+                      <i class='bx bx-grid-alt nav_icon' title="Dashboard"></i>
                       <span class="nav_name">Dashboard</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bx-cart-add nav_icon' ></i>
+                      <i class='bx bx-cart-add nav_icon' title="Orders"></i>
                       <span class="nav_name">Orders</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bx-spreadsheet nav_icon'></i>
+                      <i class='bx bx-spreadsheet nav_icon' title="Claimed Orders"></i>
                       <span class="nav_name">Claimed Orders</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bxs-capsule nav_icon' ></i>
+                      <i class='bx bxs-capsule nav_icon' title="Medicines"></i>
                       <span class="nav_name">Medicines</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bx-store nav_icon'></i>
+                      <i class='bx bx-store nav_icon' title="Enrolled Shops"></i>
                       <span class="nav_name">Enrolled Shops</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bxs-star-half nav_icon'></i>
+                      <i class='bx bxs-star-half nav_icon' title="Reviews"></i>
                       <span class="nav_name">Reviews</span>
                     </a>
                     @if (Auth::user()->superadmin === 1) 
                     <a href="#" class="nav_link">
-                      <i class='bx bx-user nav_icon'></i>
+                      <i class='bx bx-user nav_icon' title="Users"></i>
                       <span class="nav_name">Users</span>
                     </a>
                     <a href="#" class="nav_link">
-                      <i class='bx bx-info-circle nav_icon'></i>
+                      <i class='bx bx-info-circle nav_icon' title="Activity Logs"></i>
                       <span class="nav_name">Activity Logs</span>
                     </a>
                   @endif
                   @if (Auth::user()->superadmin === 0)
                   <a href="#" class="nav_link">
-                    <i class='bx bx-info-circle nav_icon'></i>
+                    <i class='bx bx-info-circle nav_icon' title="FAQ's"></i>
                     <span class="nav_name">FAQ's</span>
                   </a>
                   @endif
@@ -137,7 +137,7 @@
                 </div>
                 <a class="nav_link" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
-                  <i class='bx bx-log-out nav_icon'></i>
+                  <i class='bx bx-log-out nav_icon' title=""></i>
                   <span class="nav_name">SignOut</span>
                 </a>
               </nav>
