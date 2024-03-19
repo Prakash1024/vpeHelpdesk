@@ -90,7 +90,13 @@
                 <div>
                   <a href="/home" class="nav_logo">
                     <img src="{{ asset('vpe.ico') }}" alt="VPE" width="30" height="24">
-                    <span class="nav_logo-name">Customer Care</span>
+                    @if (Auth::user()->superadmin === 2)
+                      <span class="nav_logo-name">Hospital</span>
+                    @elseif (Auth::user()->superadmin === 0)
+                      <span class="nav_logo-name">Customer Care</span>
+                    @else 
+                      <span class="nav_logo-name">Admin</span>
+                    @endif
                   </a>
                   <div class="nav_list">
                     <a href="/home" class="nav_link active">
@@ -118,7 +124,7 @@
                       <span class="nav_name">Reviews</span>
                     </a>
                     @if (Auth::user()->superadmin === 1) 
-                    <a href="#" class="nav_link">
+                    <a href="/users" class="nav_link">
                       <i class='bx bx-user nav_icon' title="Users"></i>
                       <span class="nav_name">Users</span>
                     </a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -12,7 +13,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        if (Auth::user()->superadmin === 1) {
+            $users = User::all();
+            $title = 'Users';
+            return view('admin.users', compact('users', 'title'));
+        } else {
+            abort(403, 'Unauthorized');
+        }
     }
 
     /**
@@ -60,6 +67,12 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        if (Auth::user()->superadmin === 1) {
+            $user = User::findOrFail($id);
+            $user->delete();
+            return redirect()->route('users.index')->with('success', 'User deleted successfully.');
+        } else {
+            abort(403, 'Unauthorized');
+        }
     }
 }

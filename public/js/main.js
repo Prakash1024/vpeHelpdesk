@@ -56,3 +56,11 @@ $(window).on('load', function () {
    function hideLoading() {
        $('#loading').fadeOut();
    }
+
+function confirmUserDelete(userId) {
+    if (confirm('Are you sure you want to delete this user?')) {
+        document.getElementById('delete-form-' + userId).submit();
+    } else {
+        return false;
+    }
+}
